@@ -1,0 +1,114 @@
+===Base de datos logistics
+
+== Estructura de tabla para la tabla customers
+
+|------
+|Columna|Tipo|Nulo|Predeterminado
+|------
+|//**id**//|int(11)|No|
+|name|varchar(50)|Sí|NULL
+|lastname|varchar(50)|Sí|NULL
+|cuit|varchar(45)|Sí|NULL
+== Volcado de datos para la tabla customers
+
+|10|matias|ramirezas|2147483647
+|26|matias|ramiasr|2147483647
+|27|lucas|leon|2147483647
+|28|asd|asd|2147483647
+|31|matias|ramirezas|20351592037
+|32|adrian |ronaldo|30159243576
+== Estructura de tabla para la tabla entryproducts
+
+|------
+|Columna|Tipo|Nulo|Predeterminado
+|------
+|//**id**//|int(11)|No|
+|idproducts|int(11)|Sí|NULL
+|suppliers_id|int(11)|Sí|NULL
+|entry_date|date|Sí|NULL
+|amount|int(11)|Sí|NULL
+|createDate|date|Sí|NULL
+|createUser|int(11)|Sí|NULL
+== Volcado de datos para la tabla entryproducts
+
+|3|4|4|2022-12-07|15|2022-12-02|1
+|4|4|4|2022-12-07|15|2022-12-02|1
+== Estructura de tabla para la tabla outputproducts
+
+|------
+|Columna|Tipo|Nulo|Predeterminado
+|------
+|//**id**//|int(11)|No|
+|idproducts|int(11)|No|
+|idcustomers|int(11)|No|
+|output_date|date|No|
+|amount|int(11)|No|
+|createdDate|date|No|
+|createUser|int(11)|No|
+== Volcado de datos para la tabla outputproducts
+
+|3|5|28|2022-11-24|2|2022-11-30|1
+|4|2|26|2022-11-29|12|2022-11-30|1
+|11|2|27|2022-11-27|2|2022-11-30|1
+|12|6|10|2022-11-24|5|2022-11-30|1
+|13|5|27|2022-11-19|12|2022-11-30|1
+|14|5|27|2022-11-29|12|2022-11-30|1
+|17|4|26|2022-11-29|2|2022-11-30|1
+|18|7|26|2022-11-24|2|2022-11-30|1
+|19|7|26|2022-11-24|2|2022-11-30|1
+|88|6|28|2022-12-09|2|2022-12-02|1
+|89|5|26|2022-12-13|12|2022-12-01|2
+|90|5|26|2022-12-13|12|2022-12-01|2
+== Estructura de tabla para la tabla products
+
+|------
+|Columna|Tipo|Nulo|Predeterminado
+|------
+|//**id**//|int(11)|No|
+|name|varchar(250)|Sí|NULL
+|detail|varchar(255)|Sí|NULL
+|amount|int(11)|No|
+== Volcado de datos para la tabla products
+
+|2|pan|harina |0
+|4|Lapiz|lapiz color negro|23
+|5|asdas|asdasd|23
+|6|camisetaasd |camiseta de argentina asdasdasd|16
+|7|agua |mineral |23
+== Estructura de tabla para la tabla suppliers
+
+|------
+|Columna|Tipo|Nulo|Predeterminado
+|------
+|//**id**//|int(15)|No|
+|name|varchar(40)|Sí|NULL
+|direction|varchar(40)|Sí|NULL
+|city|varchar(40)|Sí|NULL
+|province|varchar(40)|Sí|NULL
+|cp|varchar(40)|Sí|NULL
+|country|varchar(40)|Sí|NULL
+|telephone|varchar(40)|Sí|NULL
+|email|varchar(40)|Sí|NULL
+== Volcado de datos para la tabla suppliers
+
+|1|Logitech51|Calle Falsa 123|Caba |Buenos Aires|11000|Argentina|1515323289|logitech@logitech.com
+|3|asd|qweqw|qweqwe|wqe|12321|wqedas1|23123123123123|123123
+|4|asd123123123|qweqw|qweqwe|wqe|12321|wqedas1|23123123123123|123123
+|5|asd12sdasd|qweqw|qweqwe|wqe|12321|wqedas1|23123123123123|123123
+|6|asd|qweqw|qweqwe23|wqe|12321|wqedas1|23123123123123|123123
+|7|asd12sdasdasd|qweqw|qweqwe|wqe123123|12321|wqedas1asdasdas|23123123123123|123123
+|14|Logit |Calle Falsa 123|Caba |Buenos Aires|10002|Argentina|1515323289|logitech@logitech.com
+== Estructura de tabla para la tabla users
+
+|------
+|Columna|Tipo|Nulo|Predeterminado
+|------
+|//**id**//|int(11)|No|
+|name|varchar(45)|Sí|NULL
+|lastname|varchar(45)|Sí|NULL
+|**email**|varchar(50)|Sí|NULL
+|password|varchar(255)|Sí|NULL
+== Volcado de datos para la tabla users
+
+|1|Admin|Admin|admin@Admin|$2y$12$gc04w7onr3o0vtyxD7PsjOashorr0cJcWsORd.bj98SHrIOYOFuK6
+|2|Matias|Ramirez|mramirez@hotmail|$2y$12$a4X7mU7q/oT4q4DBRleKP.8a6wgln85AC/U.TJ/m5gFFBpHMM7SkG
